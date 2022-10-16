@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ViewListIcon from '@mui/icons-material/ViewList';
 import ViewModuleIcon from '@mui/icons-material/ViewModule';
 import styles from './index.module.css';
@@ -21,3 +22,8 @@ export default function IconSwitch({ icon, onSwitch }) {
     </div>
   );
 }
+
+IconSwitch.propTypes = {
+  icon: PropTypes.string.isRequired,
+  onSwitch: PropTypes.func.isRequired,
+};

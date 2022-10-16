@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './index.module.css';
 
 export default function ShopItem({ item }) {
@@ -14,3 +15,12 @@ export default function ShopItem({ item }) {
     </li>
   );
 }
+
+ShopItem.propTypes = {
+  item: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    price: PropTypes.string.isRequired,
+    color: PropTypes.string.isRequired,
+    img: PropTypes.string.isRequired,
+  }).isRequired,
+};

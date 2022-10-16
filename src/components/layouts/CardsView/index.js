@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ShopCard from '../ShopCard';
 import styles from './index.module.css';
 
@@ -11,3 +12,7 @@ export default function CardsView({ products }) {
     </ul>
   );
 }
+
+CardsView.propTypes = {
+  products: PropTypes.arrayOf(PropTypes.object).isRequired,
+};

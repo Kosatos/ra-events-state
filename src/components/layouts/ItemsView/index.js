@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ShopItem from '../ShopItem';
 import styles from './index.module.css';
 
@@ -11,3 +12,7 @@ export default function ItemsView({ products }) {
     </ul>
   );
 }
+
+ItemsView.propTypes = {
+  products: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
