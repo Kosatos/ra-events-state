@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './index.module.css';
 
 export default function Toolbar({ filters, selected, onSelect }) {
@@ -24,3 +25,9 @@ export default function Toolbar({ filters, selected, onSelect }) {
     </div>
   );
 }
+
+Toolbar.propTypes = {
+  filters: PropTypes.arrayOf(PropTypes.string).isRequired,
+  selected: PropTypes.string.isRequired,
+  onSelect: PropTypes.func.isRequired,
+};

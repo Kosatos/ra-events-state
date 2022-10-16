@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './index.module.css';
 
 export default function ProjectList({ projects }) {
@@ -30,3 +31,7 @@ export default function ProjectList({ projects }) {
     </div>
   );
 }
+
+ProjectList.propTypes = {
+  projects: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
